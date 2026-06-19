@@ -98,12 +98,13 @@ void NetworkingServer::ClientDisconnected(uint64_t steamId)
 
 void NetworkingServer::SendMessage(uint64_t steamId, const void *data, uint32_t size)
 {
+    /*
     if (!m_clients.Has(steamId))
     {
         Platform::Print("No csgo_gc session with %llu, not sending message!!!\n");
         return;
     }
-
+    */
     SendMessageToUser(m_networkingMessages, steamId, data, size);
 }
 
